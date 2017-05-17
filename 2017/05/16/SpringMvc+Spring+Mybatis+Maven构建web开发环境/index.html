@@ -14,16 +14,25 @@
 <meta name="author" content="笑笑" />
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="笑笑的博客">
-<meta property="og:url" content="https://mmlovedy.github.io/index.html">
+<meta name="description" content="PS.本项目基于Intellij idea进行项目构建 1、首先来看项目目录 先建立如下几个包   在src/main/java下建立  12345com.springmvc.controller    com.springmvc.dao           com.springmvc.modelcom.springmvc.servicecom.springmvc.service.impl  在s">
+<meta name="keywords" content="Spring,Mybatis,SpringMVC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringMvc+Spring+Mybatis+Maven构建web开发环境">
+<meta property="og:url" content="https://mmlovedy.github.io/2017/05/16/SpringMvc+Spring+Mybatis+Maven构建web开发环境/index.html">
 <meta property="og:site_name" content="笑笑的博客">
+<meta property="og:description" content="PS.本项目基于Intellij idea进行项目构建 1、首先来看项目目录 先建立如下几个包   在src/main/java下建立  12345com.springmvc.controller    com.springmvc.dao           com.springmvc.modelcom.springmvc.servicecom.springmvc.service.impl  在s">
+<meta property="og:image" content="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springmvc/webcloud.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springmvc/maven.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springmvc/maven1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springmvc/junit.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springmvc/welcome.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springmvc/welcome1.png">
+<meta property="og:updated_time" content="2017-05-17T05:01:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="笑笑的博客">
+<meta name="twitter:title" content="SpringMvc+Spring+Mybatis+Maven构建web开发环境">
+<meta name="twitter:description" content="PS.本项目基于Intellij idea进行项目构建 1、首先来看项目目录 先建立如下几个包   在src/main/java下建立  12345com.springmvc.controller    com.springmvc.dao           com.springmvc.modelcom.springmvc.servicecom.springmvc.service.impl  在s">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springmvc/webcloud.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -49,13 +58,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>笑笑的博客</title>
+<title>SpringMvc+Spring+Mybatis+Maven构建web开发环境 | 笑笑的博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -64,8 +71,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -261,88 +268,7 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Springboot-admin 监控" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/05/17/Springboot-admin 监控/" class="article-date">
-      <time datetime="2017-05-17T06:05:54.000Z" itemprop="datePublished">2017-05-17</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/17/Springboot-admin 监控/">Springboot-admin 监控</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="一、搭建-Server-端"><a href="#一、搭建-Server-端" class="headerlink" title="一、搭建 Server 端"></a>一、搭建 Server 端</h2><p><strong> 1、新建一个 springboot 项目，这里采用 IDEA 的 SpringInitalizr 创建 </strong><br><img src="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springboot-admin/1.png" alt="image"><br><strong> 2、pom.xml 文件中引入依赖，要注意 springboot parent版本需要跟 admin客户端相同，不然启动报错 </strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">   &lt;groupId&gt;de.codecentric&lt;/groupId&gt;</div><div class="line">   &lt;artifactId&gt;spring-boot-admin-server&lt;/artifactId&gt;</div><div class="line">   &lt;version&gt;1.3.2&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">   &lt;groupId&gt;de.codecentric&lt;/groupId&gt;</div><div class="line">   &lt;artifactId&gt;spring-boot-admin-server-ui&lt;/artifactId&gt;</div><div class="line">   &lt;version&gt;1.3.2&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-<p><strong> 3、在入口类上加@EnableAdminServer注解 </strong></p>
-<p><img src="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springboot-admin/2.png" alt="image"></p>
-<p><strong> 4、在 application.properties 中加 </strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">server.port = 8090</div><div class="line">spring.application.name=Spring Boot Admin Web</div><div class="line">spring.boot.admin.url=http://localhost:$&#123;server.port&#125;</div><div class="line">spring.jackson.serialization.indent_output=true</div><div class="line">endpoints.health.sensitive=false</div></pre></td></tr></table></figure>
-<hr>
-<p><strong> 5、新建 logback.xml 用于 admin 中动态修改日志级别 </strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;configuration&gt;</div><div class="line">    &lt;include resource=&quot;org/springframework/boot/logging/logback/base.xml&quot;/&gt;</div><div class="line">    &lt;logger name=&quot;org.springframework.web&quot; level=&quot;DEBUG&quot;/&gt;</div><div class="line">    &lt;jmxConfigurator/&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure>
-<p><strong> 6、springboot:run 启动服务端 </strong></p>
-<h2 id="二、配置需要被监控的客户端"><a href="#二、配置需要被监控的客户端" class="headerlink" title="二、配置需要被监控的客户端"></a>二、配置需要被监控的客户端</h2><p><strong> 1、在 pom.xml 中增加监控依赖，注意版本号要跟服务端一致 </strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!-- springboot 监控客户端 --&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">   &lt;groupId&gt;de.codecentric&lt;/groupId&gt;</div><div class="line">   &lt;artifactId&gt;spring-boot-admin-starter-client&lt;/artifactId&gt;</div><div class="line">   &lt;version&gt;1.3.2&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">   &lt;groupId&gt;org.jolokia&lt;/groupId&gt;</div><div class="line">   &lt;artifactId&gt;jolokia-core&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
-<p><strong> 2、配置客户端 application.properties </strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">spring.boot.admin.url=http://localhost:8090</div><div class="line">#管理权限关闭，否则会报如下错误</div><div class="line">management.security.enabled = false</div></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springboot-admin/3.png" alt="image"><br><strong> 3、跟服务端一样配置 logback.xml </strong><br><strong> 4、springboot:run </strong></p>
-<h2 id="三、验证配置"><a href="#三、验证配置" class="headerlink" title="三、验证配置"></a>三、验证配置</h2><p><strong> 进入<a href="http://localhost:8090/#/overview" target="_blank" rel="external">http://localhost:8090/#/overview</a>将能看到应用的情况 </strong><br><img src="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springboot-admin/4.png" alt="image"><br><img src="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springboot-admin/5.png" alt="image"><br><strong> 修改日志级别 </strong><br><img src="https://raw.githubusercontent.com/mmlovedy/MarkDownPic/master/springboot-admin/6.png" alt="image"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/后端技术/">后端技术</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Springboot/">Springboot</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-SpringMvc+Spring+Mybatis+Maven构建web开发环境" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-SpringMvc+Spring+Mybatis+Maven构建web开发环境" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2017/05/16/SpringMvc+Spring+Mybatis+Maven构建web开发环境/" class="article-date">
@@ -360,12 +286,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/16/SpringMvc+Spring+Mybatis+Maven构建web开发环境/">SpringMvc+Spring+Mybatis+Maven构建web开发环境</a>
+    <h1 class="article-title" itemprop="name">
+      SpringMvc+Spring+Mybatis+Maven构建web开发环境
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/后端技术/">后端技术</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-Mybatis-SpringMVC/">Spring,Mybatis,SpringMVC</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -403,27 +344,85 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/后端技术/">后端技术</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-Mybatis-SpringMVC/">Spring,Mybatis,SpringMVC</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/05/16/SpringMvc+Spring+Mybatis+Maven构建web开发环境/">SpringMvc+Spring+Mybatis+Maven构建web开发环境</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">笑笑</a></p>
+        <p><span>发布时间:</span>2017-05-16, 22:45:14</p>
+        <p><span>最后更新:</span>2017-05-17, 13:01:14</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/05/16/SpringMvc+Spring+Mybatis+Maven构建web开发环境/" title="SpringMvc+Spring+Mybatis+Maven构建web开发环境">https://mmlovedy.github.io/2017/05/16/SpringMvc+Spring+Mybatis+Maven构建web开发环境/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://mmlovedy.github.io/2017/05/16/SpringMvc+Spring+Mybatis+Maven构建web开发环境/　　作者: 笑笑" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/05/17/Springboot-admin 监控/">
+                    Springboot-admin 监控
+                </a>
+            </div>
+        
+        
+    </nav>
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、首先来看项目目录"><span class="toc-text">1、首先来看项目目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、配置POM-xml文件"><span class="toc-text">2、配置POM.xml文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、配置Spring-xml"><span class="toc-text">3、配置Spring.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、配置Mybatis-xml"><span class="toc-text">4、配置Mybatis.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、配置SpringMVC-启动web"><span class="toc-text">5、配置SpringMVC+启动web</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、访问"><span class="toc-text">6、访问</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"SpringMvc+Spring+Mybatis+Maven构建web开发环境　| 笑笑的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
 
 
 
@@ -431,9 +430,47 @@
 
 
 
+    
+        <section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2133793';
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
 
-  
-  
+    <div id="uyan_frame"></div>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/05/17/Springboot-admin 监控/" title="上一篇: Springboot-admin 监控">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/17/Springboot-admin 监控/">Springboot-admin 监控</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/16/SpringMvc+Spring+Mybatis+Maven构建web开发环境/">SpringMvc+Spring+Mybatis+Maven构建web开发环境</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
